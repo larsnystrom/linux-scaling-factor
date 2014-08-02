@@ -1,0 +1,19 @@
+{
+  "name": "linux-scaling-factor",
+  "version": "0.0.0",
+  "description": "Get the scaling factor used in Ubuntu.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:larsnystrom/linux-scaling-factor.git"
+  },
+  "author": "Lars Nyström <nystrom.lars.egon@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/larsnystrom/linux-scaling-factor/issues"
+  },
+  "homepage": "https://github.com/larsnystrom/linux-scaling-factor"
+}
