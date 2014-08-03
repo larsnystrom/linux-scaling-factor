@@ -15,9 +15,11 @@ module.exports = {
       return;
     }
 
+    var that = this;
     this._findScaling(function (scaling) {
-      var zoom = scaling * scaling;
-      nwWindow.zoomLevel = zoom;
+      if (nwWindow.window.devicePixelRatio != scaling) {
+        that._scaleWindow(nwWindow, scaling);
+      }
     });
   },
 
@@ -40,5 +42,13 @@ module.exports = {
 
       callback(stdout);
     });
+  },
+
+  _scaleWindow: function(nwWindow, scaling) {
+    var zoom = scaling * scaling;
+    var width = nwWindow.width * scaling;
+    var height = nwWindow.height * scaling;
+    nwWindow.zoomLevel = zoom;
+    nwWindow.resizeTo(width, height);
   }
 };
